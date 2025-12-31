@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dijital Mektup</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1 class="title">Dijital Mektup Gönder</h1>
+
+<div id="setup-area">
+    <h3>Mektubu Özelleştir</h3>
+
+    <input type="text" id="userTitle" placeholder="Hitap (Anneciğim, Sevgilim)">
+    <textarea id="userNote" placeholder="Mesajını yaz..."></textarea>
+    <input type="text" id="userName" placeholder="İmza (Oğlun Yunus)">
+
+    <button class="btn" id="createBtn">Paylaşım Linki Oluştur</button>
+
+    <div id="link-display">
+        <input type="text" id="generatedUrl" readonly>
+        <button class="btn green" id="copyBtn">Linki Kopyala</button>
+    </div>
+</div>
+
+<div class="container">
+    <div class="envelope" id="envelope">
+        <div class="flap" id="flap"></div>
+        <div class="heart" id="heart">❤️</div>
+
+        <div class="paper" id="paper">
+            <div class="content">
+                <div id="previewText">Anneciğim,Sevgilim</div>
+                <div id="fullNote">
+                    <p>
+                        Mesajını buraya yazabilirsin.<br>
+                    </p>
+                    <p><strong>Oğlun Yunus</strong></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

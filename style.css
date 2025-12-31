@@ -1,0 +1,132 @@
+body {
+    margin: 0;
+    padding: 40px 0;
+    font-family: Arial, sans-serif;
+    background: #ffe4e1;
+    text-align: center;
+}
+
+.title {
+    color: #d6336c;
+    margin-bottom: 20px;
+}
+
+/* Setup */
+#setup-area {
+    background: #fff;
+    width: 90%;
+    max-width: 500px;
+    margin: 0 auto 40px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,.1);
+    position: relative;
+    z-index: 10;
+}
+
+#setup-area input,
+#setup-area textarea {
+    width: 90%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.btn {
+    background: #d6336c;
+    color: white;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.btn.green { background: #28a745; }
+
+#link-display {
+    display: none;
+    margin-top: 10px;
+}
+
+/* Envelope */
+.container {
+    width: 400px;
+    margin: 0 auto;
+}
+
+.envelope {
+    position: relative;
+    width: 100%;
+    height: 260px;
+    background: #f2e8cf;
+    border-radius: 8px;
+    border: 2px solid #ccc;
+}
+
+/* Flap */
+.flap {
+    position: absolute;
+    width: 100%;
+    height: 120px;
+    background: #e0c097;
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+    transform-origin: top;
+    transition: transform .6s ease;
+    z-index: 3;
+}
+
+/* Heart */
+.heart {
+    position: absolute;
+    top: 95px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 38px;
+    cursor: pointer;
+    z-index: 5;
+    transition: top .6s ease;
+}
+
+/* Kalp yukarı çıksın */
+.envelope.opened .heart {
+    top: 18px;
+}
+
+/* Paper */
+.paper {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 340px;
+    height: 0;
+    background: white;
+    overflow: hidden;
+    border-radius: 6px;
+    transition: height .5s ease;
+    z-index: 2;
+}
+
+/* ❗ SADECE KISMEN */
+.paper.preview {
+    height: 140px;
+}
+
+/* ❗ TAM AÇIK */
+.paper.open {
+    height: 250px;
+    overflow-y: auto;
+}
+
+.content {
+    padding: 20px;
+    text-align: left;
+}
+
+#previewText {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
